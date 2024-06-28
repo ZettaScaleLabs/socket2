@@ -116,7 +116,6 @@ pub(crate) use libc::MSG_TRUNC;
 #[cfg(not(target_os = "redox"))]
 pub(crate) use libc::SO_OOBINLINE;
 // Used in `Socket`.
-#[cfg(not(target_os = "nto"))]
 pub(crate) use libc::ipv6_mreq as Ipv6Mreq;
 #[cfg(not(any(
     target_os = "dragonfly",
@@ -219,6 +218,7 @@ pub(crate) use libc::{IPV6_ADD_MEMBERSHIP, IPV6_DROP_MEMBERSHIP};
     target_os = "ios",
     target_os = "macos",
     target_os = "netbsd",
+    target_os = "nto",
     target_os = "openbsd",
     target_os = "solaris",
     target_os = "tvos",
